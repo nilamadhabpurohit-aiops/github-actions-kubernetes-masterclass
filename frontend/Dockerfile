@@ -6,6 +6,8 @@ RUN apk add --no-cache python3 make g++
 
 COPY package*.json ./
 
+RUN npm cache clean --force
+
 RUN npm install --legacy-peer-deps
 
 COPY . .
